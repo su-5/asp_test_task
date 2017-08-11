@@ -28,7 +28,7 @@ namespace Web
                 "~/Scripts/jquery-{version}.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                //"~/Content/font-awesome.css",
+                "~/Content/font-awesome.css",
                 //"~/Content/ui-grid.css",
                 //"~/Content/ui-grid.css",
                 "~/Content/Site.css",
