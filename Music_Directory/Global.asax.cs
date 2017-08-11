@@ -16,7 +16,7 @@ namespace Music_Directory
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-            BundleConfig.RegisterBundles(BundleTable.Bundles);
+            Web.BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
     }
 }
