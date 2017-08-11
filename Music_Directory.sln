@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Music_Directory", "Music_Directory\Music_Directory.csproj", "{4FA4AC65-A0C1-4CAA-B721-A672519D74D5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WEB", "Music_Directory\WEB.csproj", "{4FA4AC65-A0C1-4CAA-B721-A672519D74D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{6BB377A5-02C4-41D6-B7AA-37D3224347EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{18D7079B-B7BF-44DC-AE93-734F272598BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{4FA4AC65-A0C1-4CAA-B721-A672519D74D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4FA4AC65-A0C1-4CAA-B721-A672519D74D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4FA4AC65-A0C1-4CAA-B721-A672519D74D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BB377A5-02C4-41D6-B7AA-37D3224347EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BB377A5-02C4-41D6-B7AA-37D3224347EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BB377A5-02C4-41D6-B7AA-37D3224347EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BB377A5-02C4-41D6-B7AA-37D3224347EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18D7079B-B7BF-44DC-AE93-734F272598BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18D7079B-B7BF-44DC-AE93-734F272598BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18D7079B-B7BF-44DC-AE93-734F272598BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18D7079B-B7BF-44DC-AE93-734F272598BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
