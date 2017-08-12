@@ -64,6 +64,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL_Core\Interfaces\IDalFactory.cs" />
+    <Compile Include="DAL_Core\Interfaces\IDbFactory.cs" />
+    <Compile Include="DAL_Core\Repositories\DalFactory.cs" />
+    <Compile Include="DAL_Core\Repositories\DbFactory.cs" />
+    <Compile Include="DAL_DB\Interfaces\IAlbumDal.cs" />
+    <Compile Include="DAL_DB\Interfaces\ITrackDal.cs" />
+    <Compile Include="DAL_DB\Repositories\AlbumDal\AlbumDal.cs" />
+    <Compile Include="DAL_DB\Repositories\AlbumDal\TrackDal.cs" />
+    <Compile Include="GenericRepository\GenericRepository.cs" />
+    <Compile Include="GenericRepository\IGenericRepository.cs" />
     <Compile Include="ModelBD\Album.cs">
       <DependentUpon>ModelBD.tt</DependentUpon>
     </Compile>
@@ -87,11 +97,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DAL_Core\" />
-    <Folder Include="DAL_DB\" />
-    <Folder Include="GenericRepository\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="ModelBD\ModelBD.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
