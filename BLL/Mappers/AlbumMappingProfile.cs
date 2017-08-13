@@ -11,7 +11,7 @@ namespace BLL.Mappers
             CreateMap<Album, AlbumDTO>()
                 .ForMember(d => d.Id, opts => opts.MapFrom(src => src.Id))
                 .ForMember(d => d.Name, opts => opts.MapFrom(src => src.Name))
-                .ForMember(d => d.Year, opts => opts.MapFrom(src => src.Year));
+                .ForMember(d => d.Year, opts => opts.MapFrom(src => src.Year.Year));
 
             CreateMap<Track, TrackDTO>()
                 .ForMember(d => d.Id, opts => opts.MapFrom(src => src.Id))

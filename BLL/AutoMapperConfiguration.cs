@@ -10,7 +10,7 @@ namespace BLL
             Mapper.Initialize(x =>
             {
                 x.AddProfile<AlbumMappingProfile>();
-               // x.AddProfile<GoodMappingProfile>();
+                x.AddProfile<TrackMappingProfile>();
             });
         }
     }

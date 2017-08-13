@@ -182,6 +182,7 @@
     <Content Include="Angular\app.js" />
     <Content Include="Angular\appConfig.js" />
     <Content Include="Angular\controllers\albumsCtlr.js" />
+    <Content Include="Angular\modalWindows\addNewAlbum.html" />
     <Content Include="Angular\modalWindows\trackModalWin.html" />
     <Content Include="Angular\services\albumsService.js" />
     <Content Include="Angular\services\loadingService.js" />

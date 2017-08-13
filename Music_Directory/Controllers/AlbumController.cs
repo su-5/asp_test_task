@@ -61,8 +61,8 @@ namespace Music_Directory.Controllers
         {
             try
             {
-                var result = _bllFactory.AlbumBll.AddNewAlbum(newAlbum);
-                return Ok(result);
+                _bllFactory.AlbumBll.AddNewAlbum(newAlbum);
+                return Ok();
             }
             catch (Exception ex)
             {

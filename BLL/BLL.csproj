@@ -47,6 +47,7 @@
     <Compile Include="BLL_Core\Interfaces\IAlbumBll.cs" />
     <Compile Include="BLL_Core\Interfaces\IBllFactory.cs" />
     <Compile Include="BLL_Core\Interfaces\ITrackBll.cs" />
+    <Compile Include="Mappers\TrackMappingProfile.cs" />
     <Compile Include="Model\ModelRequest\AddNewAlbumPL.cs" />
     <Compile Include="Model\ModelDTO\AlbumDTO.cs" />
     <Compile Include="Model\ModelDTO\BasicDetails.cs" />

@@ -1,0 +1,25 @@
+﻿<div class="modal-header">
+    <h3 class="text-center">
+        Добавление нового альбома
+    </h3>
+    <br/>
+    <div class="clearfix"></div>
+    <form class="form-inline">
+        <div>
+            <label>Введите название альбома: &nbsp;<input class="form-control label-nameNewAlbum-param" ng-model="NameAlbum" type="text" /></label>
+        </div>
+        <div>
+            <label class="label-select-years-param">Введите год альбома:</label>
+            <select class="form-control select-years-papam label-nameNewAlbum-param" data-ng-model="AlbumYears" data-ng-options="option for option in comboBoxOptions"></select>
+        </div>
+        <br/>
+        <label>Выберите треки:</label>
+        <div id="portlet" ui-grid="gridTracksforTheNewalbum"  ui-grid-auto-resize ui-grid-resize-columns ui-grid-selection ng-style="{'height':height}">
+        </div>
+    </form>
+    <div align="right" class="but-cancel-style">
+        <button class="btn btn-xs btn-info" type="button" ng-click="addAlbum()">Добавить</button>
+        <button class="btn btn-xs btn-warning" type="button" ng-click="cancel()">Отмена</button>
+    </div>
+
+</div>

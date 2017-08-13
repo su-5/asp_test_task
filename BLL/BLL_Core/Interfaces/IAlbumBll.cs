@@ -13,6 +13,6 @@ namespace BLL.BLL_Core.Interfaces
     {
         IList<AlbumDTO> GetAlbums();
         IList<TrackDTO> GetTracksFromAlbum(int id);
-        IList<AddAlbumPL> AddNewAlbum(AddAlbumPL id);
+        void AddNewAlbum(AddAlbumPL data);
     }
 }

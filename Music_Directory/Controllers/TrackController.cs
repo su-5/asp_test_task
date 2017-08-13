@@ -23,7 +23,20 @@ namespace Music_Directory.Controllers
             _bllFactory = bllFactory;
         }
 
-       
+        [HttpGet]
+        [Route("GetTracks")]
+        public IHttpActionResult GetTracks()
+        {
+            try
+            {
+                var result = _bllFactory.TrackBll.GetTracks();
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                throw new ErrorOwnException("Ошибка при получении треков" + ex.Message);
+            }
+        }
 
     }
 }

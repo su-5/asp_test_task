@@ -32,9 +32,15 @@ namespace BLL.BLL_Core.Repositories
             return result;
         }
 
-        public IList<AddAlbumPL> AddNewAlbum(AddAlbumPL id)
+        public void AddNewAlbum(AddAlbumPL data)
         {
-            throw new NotImplementedException();
+            Album newAlbum = new Album();
+            DateTime dateValue = new DateTime(Convert.ToInt32(data.Album.Year), 01, 01);
+            newAlbum.Year = dateValue;
+            newAlbum.Name = data.Album.Name;
+            newAlbum.Tracks = Mapper.Map<IList<TrackDTO>, IList<Track>>(data.TrackList);
+            _dalFactory.Album.Add(newAlbum);
+
         }
     }
 }

@@ -46,3 +46,21 @@
     margin-top: 8px;
     margin-right: 11px;
 }
+
+.btn-newAlbum-param {
+    margin-top: -29px;
+    margin-left: 19px;
+}
+
+.label-nameNewAlbum-param {
+    height: 21px!important;
+    width: 191px!important;
+}
+
+.label-select-years-param {
+    margin-left: 8%;
+}
+
+.select-years-papam {
+    padding: 0 !important;
+}
