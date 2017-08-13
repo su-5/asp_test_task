@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using Music_Directory.App_Start;
 using System.Web.Http;
 
 namespace Music_Directory
@@ -9,16 +7,25 @@ namespace Music_Directory
     {
         public static void Register(HttpConfiguration config)
         {
-            // Конфигурация и службы веб-API
+            // Web API configuration and services
+            config.EnsureInitialized();
 
-            // Маршруты веб-API
-            config.MapHttpAttributeRoutes();
+            config.Formatters.JsonFormatter.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Serialize;
+            config.Formatters.JsonFormatter.SerializerSettings.PreserveReferencesHandling = Newtonsoft.Json.PreserveReferencesHandling.None;
+
+
+            // Web API routes
+            //config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(
-                name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
-            );
+                    name: "DefaultApi",
+                    routeTemplate: "api/{controller}/{action}/{id}",
+                    defaults: new { id = RouteParameter.Optional, action = RouteParameter.Optional },
+                    constraints: null
+                    );
+
+            config.DependencyResolver = new DependenciesRegistry.UnityResolver(DependenciesRegistry.RegisterComponents());
+
         }
     }
 }

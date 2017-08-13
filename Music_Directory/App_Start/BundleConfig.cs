@@ -15,22 +15,21 @@ namespace Web
                 "~/Scripts/angular-messages.js",
                 "~/Scripts/angular-touch.js",
                 "~/Scripts/angular-resource.js",
-                //"~/Scripts/angular-ui/ui-bootstrap.js",
-                //"~/Scripts/angular-ui/ui-bootstrap-tpls.js",
-                //"~/Scripts/angular-ui-router.js",
-                //"~/Scripts/angular-ui-ieshiv.js",
+                "~/Scripts/angular-ui/ui-bootstrap.js",
+                "~/Scripts/angular-ui/ui-bootstrap-tpls.js",
+                "~/Scripts/angular-ui-router.js",
+                "~/Scripts/angular-ui-ieshiv.js",
                 "~/Scripts/bootstrap.js",
-                //"~/Scripts/ui-grid.js",
+                "~/Scripts/ui-grid.js",
                 "~/Scripts/bootbox.js",
                 "~/Scripts/angular-ui/ui-bootstrap-tpls.js",
                 "~/Scripts/angular-ui/ui-bootstrap",
-                //"~/Scripts/angular-ui.js
+                "~/Scripts/angular-ui.js",
                 "~/Scripts/jquery-{version}.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                 "~/Content/font-awesome.css",
-                //"~/Content/ui-grid.css",
-                //"~/Content/ui-grid.css",
+                "~/Content/ui-grid.css",
                 "~/Content/Site.css",
                 "~/Content/bootstrap.css"));
 

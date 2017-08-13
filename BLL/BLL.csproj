@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=6.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.6.1.1\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,12 +43,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutoMapperConfiguration.cs" />
+    <Compile Include="BLL_Core\Interfaces\IAlbumBll.cs" />
+    <Compile Include="BLL_Core\Interfaces\IBllFactory.cs" />
+    <Compile Include="BLL_Core\Interfaces\ITrackBll.cs" />
+    <Compile Include="BLL_Core\ModelDTO\AlbumDTO.cs" />
+    <Compile Include="BLL_Core\ModelDTO\BasicDetails.cs" />
+    <Compile Include="BLL_Core\Repositories\AlbumBll.cs" />
+    <Compile Include="BLL_Core\Repositories\BllFactory.cs" />
+    <Compile Include="BLL_Core\Repositories\TrackBll.cs" />
+    <Compile Include="Exception\ErrorOwnException.cs" />
+    <Compile Include="Mappers\AlbumMappingProfile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="BLL_Core\" />
-    <Folder Include="Exception\" />
-    <Folder Include="Mappers\" />
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{6bb377a5-02c4-41d6-b7aa-37d3224347ea}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
