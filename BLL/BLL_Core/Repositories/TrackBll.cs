@@ -4,7 +4,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AutoMapper;
+using BLL.ModelDTO;
 using DAL.DAL_Core.Repositories;
+using DAL.ModelBD;
 
 namespace BLL.BLL_Core.Repositories
 {
@@ -16,5 +19,6 @@ namespace BLL.BLL_Core.Repositories
         {
             _dalFactory = dalFactory;
         }
+        
     }
 }

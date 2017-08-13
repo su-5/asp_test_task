@@ -12,7 +12,7 @@ namespace Music_Directory.Controllers
 {
     [RoutePrefix("api/album")]
 
-    public class AlbumController : ApiController
+    public class AlbumController : BaseApiController
     {
         private readonly IBllFactory _bllFactory;
 
@@ -27,16 +27,31 @@ namespace Music_Directory.Controllers
 
         [HttpGet]
         [Route("GetAlbums")]
-        public IList<AlbumDTO> GetAlbums()
+        public IHttpActionResult GetAlbums()
         {
             try
             {
                 var result = _bllFactory.AlbumBll.GetAlbums();
-                return result;
+                return Ok(result);
             }
             catch (Exception ex)
             {
                 throw new ErrorOwnException("Ошибка при получении стиска альбомов" + ex.Message);
+            }
+        }
+
+        [HttpGet]
+        [Route("GetTracksFromAlbum")]
+        public IHttpActionResult GetTracksFromAlbum([FromUri] int id)
+        {
+            try
+            {
+                var result = _bllFactory.AlbumBll.GetTracksFromAlbum(id);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                throw new ErrorOwnException("Ошибка при получении стиска треков" + ex.Message);
             }
         }
     }
