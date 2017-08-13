@@ -5,8 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
-using BLL.BLL_Core.ModelDTO;
-using BLL.ModelDTO;
+using BLL.Model.ModelDTO;
+using BLL.Model.ModelRequest;
 using DAL.DAL_Core.Repositories;
 using DAL.ModelBD;
 
@@ -15,13 +15,14 @@ namespace BLL.BLL_Core.Repositories
     public class AlbumBll : IAlbumBll
     {
         private readonly DalFactory _dalFactory;
+
         public AlbumBll(DalFactory dalFactory)
         {
-            _dalFactory = dalFactory;
+           _dalFactory = dalFactory;
         }
         public IList<AlbumDTO> GetAlbums()
         {
-            var result =  Mapper.Map<List<Album>, IList<AlbumDTO>>(_dalFactory.Album.GetAll().ToList());
+            var result = Mapper.Map<List<Album>, IList<AlbumDTO>>(_dalFactory.Album.GetAll().ToList());
             return result;
         }
 
@@ -29,6 +30,11 @@ namespace BLL.BLL_Core.Repositories
         {
             var result = Mapper.Map<IList<Track>, IList<TrackDTO>>(_dalFactory.Album.GetById(id).Tracks.ToList());
             return result;
+        }
+
+        public IList<AddAlbumPL> AddNewAlbum(AddAlbumPL id)
+        {
+            throw new NotImplementedException();
         }
     }
 }

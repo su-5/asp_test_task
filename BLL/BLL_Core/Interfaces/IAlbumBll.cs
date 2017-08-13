@@ -1,10 +1,10 @@
-﻿using BLL.BLL_Core.ModelDTO;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using BLL.ModelDTO;
+using BLL.Model.ModelDTO;
+using BLL.Model.ModelRequest;
 using DAL.ModelBD;
 
 namespace BLL.BLL_Core.Interfaces
@@ -13,5 +13,6 @@ namespace BLL.BLL_Core.Interfaces
     {
         IList<AlbumDTO> GetAlbums();
         IList<TrackDTO> GetTracksFromAlbum(int id);
+        IList<AddAlbumPL> AddNewAlbum(AddAlbumPL id);
     }
 }

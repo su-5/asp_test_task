@@ -6,7 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using BLL.BLL_Core.ModelDTO;
+using BLL.Model.ModelRequest;
 
 namespace Music_Directory.Controllers
 {
@@ -52,6 +52,21 @@ namespace Music_Directory.Controllers
             catch (Exception ex)
             {
                 throw new ErrorOwnException("Ошибка при получении стиска треков" + ex.Message);
+            }
+        }
+
+        [HttpPost]
+        [Route("AddNewAlbum")]
+        public IHttpActionResult AddNewAlbum([FromBody] AddAlbumPL newAlbum)
+        {
+            try
+            {
+                var result = _bllFactory.AlbumBll.AddNewAlbum(newAlbum);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                throw new ErrorOwnException("Ошибка при добавлении альбома" + ex.Message);
             }
         }
     }

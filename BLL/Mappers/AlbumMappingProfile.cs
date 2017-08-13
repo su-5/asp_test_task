@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
-using BLL.BLL_Core.ModelDTO;
-using BLL.ModelDTO;
+using BLL.Model.ModelDTO;
 using DAL.ModelBD;
 
 namespace BLL.Mappers

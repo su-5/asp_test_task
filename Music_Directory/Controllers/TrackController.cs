@@ -5,7 +5,6 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using BLL.BLL_Core.Interfaces;
-using BLL.BLL_Core.ModelDTO;
 using BLL.Exception;
 
 namespace Music_Directory.Controllers

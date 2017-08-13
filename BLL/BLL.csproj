@@ -47,14 +47,15 @@
     <Compile Include="BLL_Core\Interfaces\IAlbumBll.cs" />
     <Compile Include="BLL_Core\Interfaces\IBllFactory.cs" />
     <Compile Include="BLL_Core\Interfaces\ITrackBll.cs" />
-    <Compile Include="ModelDTO\AlbumDTO.cs" />
-    <Compile Include="ModelDTO\BasicDetails.cs" />
+    <Compile Include="Model\ModelRequest\AddNewAlbumPL.cs" />
+    <Compile Include="Model\ModelDTO\AlbumDTO.cs" />
+    <Compile Include="Model\ModelDTO\BasicDetails.cs" />
     <Compile Include="BLL_Core\Repositories\AlbumBll.cs" />
     <Compile Include="BLL_Core\Repositories\BllFactory.cs" />
     <Compile Include="BLL_Core\Repositories\TrackBll.cs" />
     <Compile Include="Exception\ErrorOwnException.cs" />
     <Compile Include="Mappers\AlbumMappingProfile.cs" />
-    <Compile Include="ModelDTO\TrackDTO.cs" />
+    <Compile Include="Model\ModelDTO\TrackDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
