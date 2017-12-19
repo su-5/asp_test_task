@@ -25,12 +25,24 @@ namespace Web
                 "~/Scripts/angular-ui/ui-bootstrap-tpls.js",
                 "~/Scripts/angular-ui/ui-bootstrap",
                 "~/Scripts/angular-ui.js",
+              //  "~/Scripts/tr/angular.integralui.accordion.min.js",
+                "~/Scripts/tr/angular.integralui.min.js",
+               // "~/Scripts/tr/angular.integralui.checkbox.min.js",
+                "~/Scripts/tr/angular.integralui.lists.min.js",
+               // "~/Scripts/tr/angular.integralui.tooltip.min.js",
+                //"~/Scripts/tr/angular.integralui.treegrid.min.js",
+                "~/Scripts/tr/angular.integralui.treeview.min.js",
+                "~/Scripts/tr/theme.selector.min.js",
                 "~/Scripts/jquery-{version}.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                 "~/Content/font-awesome.css",
                 "~/Content/ui-grid.css",
                 "~/Content/Site.css",
+                "~/Content/css/themes/theme-flat-blue.css id='theme'",
+                "~/Content/css/integralui.treeview.css",
+                "~/Content/css/integralui.css",
+                "~/Content/css/samples.css",
                 "~/Content/bootstrap.css"));
 
             //minimization AngularJs Scripts

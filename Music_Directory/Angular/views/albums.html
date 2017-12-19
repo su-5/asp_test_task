@@ -1,9 +1,121 @@
-﻿<div style="width: 100%; float: left;">
+﻿<style type="text/css">
+    .control-panel {
+        margin-left: 35px;
+        width: 250px;
+    }
+
+    .feature-content {
+        width: 700px;
+    }
+
+    .directive {
+    }
+
+    .custom-item {
+        padding: 5px;
+        position: relative;
+    }
+
+    .item-subtext {
+        color: #ababab;
+        font-style: italic;
+        font-size: 0.875em;
+    }
+
+    .item-button {
+        background-image: url(../../resources/icons.png);
+        background-repeat: no-repeat;
+        display: inline-block;
+        overflow: hidden;
+        padding: 0;
+        margin: 3px 4px 0 4px;
+        width: 16px;
+        height: 16px;
+        float: right;
+        opacity: 0.6;
+    }
+
+        .item-button:hover {
+            opacity: 1;
+        }
+
+    .item-button-trash {
+        background-position: -80px -96px;
+    }
+
+    .item-button-edit {
+        background-position: -128px -81px;
+    }
+
+    .iui-treeview-item {
+        border-bottom: thin solid #e5e5e5;
+        overflow: hidden;
+    }
+
+    .item-expand-box {
+        background: url(../../resources/icons-x24.png) no-repeat 0 0;
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-right: 2px;
+        vertical-align: top;
+    }
+
+    .item-expand-box-open {
+        background-position: -120px -144px;
+    }
+
+    .item-expand-box-close {
+        background-position: -144px -144px;
+    }
+
+    .item-text {
+        border: thin solid transparent;
+    }
+
+    .item-editor {
+        border: thin solid gray;
+        padding: 3px;
+    }
+
+    .iui-treeview-item-hovered {
+        background: #efefef;
+    }
+
+    .iui-treeview-item-selected {
+        background-color: #dedede;
+        color: #008000;
+    }
+</style>
+<div style="width: 100%; float: left;">
     <br />
     <div>
         <div class="clearfix"></div>
-        <button type="button" class="btn btn-sm btn-newAlbum-param btn-primary" ng-click="windowAddNewAlbum()">Добавить новый альбом</button>
-        <div id="portlet" ui-grid="gridAlbums" ui-grid-auto-resize ui-grid-resize-columns ui-grid-selection ui-grid-move-columns ui-grid-save-state ui-grid-cellNav ng-style="{'height':mh}">
+        <div class="block-left"><button type="button" class="btn btn-sm btn-newAlbum-param btn-primary " ng-click="windowAddNewAlbum()">Добавить новый альбом</button></div>
+        <div class="block-left"><button type="button" class="btn btn-sm btn-newAlbum-param btn-danger" ng-click="windowAddNewAlbum()">Открыть в тревью</button></div>
+        <!--<div class="feature">
+            <script type="text/ng-template" id="'item-template.html'">
+                <div class="custom-item" ng-mouseenter="obj.showButtons = true" ng-mouseleave="obj.showButtons = !obj.showButtonsOnHover">
+                    <div iui-class="{{obj.expandBox}}" ng-click="obj.events.expandBoxClick(obj)"></div>
+                    <div style="display:inline-block;vertical-align:middle">
+                        <span class="item-text" ng-show="!obj.edit">{{obj.text}}</span>
+                        <input class="item-editor" ng-show="obj.edit" ng-model="obj.editText" ng-keydown="obj.events.editorKeyDown($event, obj)" iui-focus="{active:obj.edit}" onFocus="this.setSelectionRange(0, this.value.length)" ng-blur="obj.events.editorLostFocus(obj)" />
+                        <span class="item-subtext" ng-show="!obj.edit">{{obj.subText}}</span>
+                    </div>
+                    <div style="display:inline-block;position:absolute;right:0;top:7px;padding-left:5px;" ng-show="obj.showButtons != false">
+                        <span class="item-button item-button-trash" ng-click="obj.events.trashClick(obj)"></span>
+                        <span class="item-button item-button-edit" ng-click="obj.events.editClick(obj)"></span>
+                    </div>
+                </div>
+            </script>
+            <div class="feature-content">
+                <iui-treeview name="{{treeName}}" class="directive" style="height: 400px" items="data" template-settings="customItemTemplate" allow-focus="false" after-collapse="onAfterCollapse(e)" after-expand="onAfterExpand(e)" update-complete="onUpdateComplete()" show-expand-boxes="false"></iui-treeview>
+            </div>
+        </div>-->
+        <div style="margin-top: 20px;">
+            <div id="portlet" ui-grid="gridAlbums" ui-grid-auto-resize ui-grid-resize-columns ui-grid-selection ui-grid-move-columns ui-grid-save-state ui-grid-cellNav ng-style="{'height':mh}">
+            </div>
         </div>
+
     </div>
 </div>
