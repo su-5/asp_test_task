@@ -10,6 +10,13 @@
                 templateUrl: "Angular/views/albums.html",
                 controller: "albumsController"
             });
+
+            // tree
+            $stateProvider.state("mainPage/tree", {
+                url: "/tree",
+                templateUrl: "Angular/views/tree.html",
+                controller: "treeController"
+            });
             $urlRouterProvider.otherwise("/albums");
         }]);
 })();

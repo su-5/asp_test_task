@@ -183,11 +183,13 @@
     <Content Include="Angular\app.js" />
     <Content Include="Angular\appConfig.js" />
     <Content Include="Angular\controllers\albumsCtlr.js" />
+    <Content Include="Angular\controllers\TreeCtrl.js" />
     <Content Include="Angular\modalWindows\addNewAlbum.html" />
     <Content Include="Angular\modalWindows\trackModalWin.html" />
     <Content Include="Angular\services\albumsService.js" />
     <Content Include="Angular\services\loadingService.js" />
     <Content Include="Angular\views\albums.html" />
+    <Content Include="Angular\views\tree.html" />
     <Content Include="App_Data\MusicDB.mdf" />
     <Content Include="App_Data\MusicDB_log.ldf">
       <DependentUpon>MusicDB.mdf</DependentUpon>
