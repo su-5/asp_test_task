@@ -17,6 +17,15 @@
                 templateUrl: "Angular/views/tree.html",
                 controller: "treeController"
             });
+
+            ////groupOfDocument
+            $stateProvider.state("mainPage/groupOfDocument", {
+                url: "/groupOfDocument",
+                templateUrl: function () { return 'Angular/catalogs/groupOfDocument/groupOfDocument.html?' + new Date(); },
+                controller: "groupOfDocumentController",
+              //  roles: "Admin_MZX;Admin_ZBT;Supervisor;Payment"
+            });
+
             $urlRouterProvider.otherwise("/albums");
         }]);
 })();

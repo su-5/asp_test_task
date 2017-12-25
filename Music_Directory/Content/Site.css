@@ -67,3 +67,165 @@
 .block-left {
     float: left !important;
 }
+
+/*---kitOfDocuments--Begin-----*/
+.pading-dok {
+    padding-top: 1px;
+}
+
+.first-card-block {
+    position: initial;
+    background: rgb(134, 138, 140);
+    height: 100%;
+}
+
+.first-card-div {
+    top: 48%;
+    left: calc(50% - 100px);
+    position: relative;
+}
+
+.right-md-card-kitOfDoc {
+    width: calc(50% - 5px);
+    border: solid 1px;
+    border-color: grey;
+    border-radius: 3px;
+    margin: 0;
+}
+
+.left-md-card-kitOfDoc {
+    width: 50%;
+    background-color: #fff;
+    border: solid 1px;
+    border-color: grey;
+    border-radius: 3px;
+    margin: 0;
+}
+
+.color-md-card-kitOfDoc {
+    background-color: rgb(134, 138, 140);
+}
+
+.bnt-add-activeCategory {
+    margin-left: 9px;
+    margin-top: 6px;
+}
+
+.btn-add-kitOfDoks {
+    padding-left: 8px;
+    margin-top: 4px;
+    padding-right: 6%;
+}
+
+.btn-edit-kitOfDoks {
+    padding-left: 9px;
+}
+
+@media (max-width: 1600px) {
+    .btn-add-kitOfDoks {
+        padding-right: 0%;
+    }
+}
+
+@media (max-width: 1280px) {
+    .btn-add-kitOfDoks button {
+        font-size: 12px;
+    }
+}
+
+.modal-small {
+    height: 255px;
+}
+
+.btn-over {
+    height: 25px;
+    padding: 0 15px 0 15px;
+}
+
+.unit-value {
+    height: 22px;
+    padding: 0px 10px;
+    margin: 1px 0;
+}
+
+.full-length {
+    width: 100%;
+}
+
+.portlet {
+    /*border: 1px solid #D5D5D5;
+    -webkit-border-radius: 4px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 4px;
+    -moz-background-clip: padding;
+    border-radius: 4px;*/
+    background-clip: padding-box;
+    position: relative;
+    clear: both;
+    width: auto;
+    margin-bottom: 2em;
+}
+
+.ng-portlet {
+    padding: 0px 0px 0px 15px;
+}
+
+..portlet-header {
+    position: relative;
+    padding: 5px 0px 0px 15px;
+    background-color: #f3f3f3;
+    border: 1px solid #D5D5D5;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    -webkit-background-clip: padding-box;
+    line-height: 0 !important;
+}
+
+.portlet-header-border {
+    border-top: 1px solid #D5D5D5;
+    border-left: 1px solid #D5D5D5;
+    border-right: 1px solid #D5D5D5;
+}
+
+.portlet-content {
+    /*padding: 22px 15px;*/
+    background: #FFF;
+    -webkit-border-radius: 4px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 4px;
+    -moz-background-clip: padding;
+    border-radius: 4px;
+    background-clip: padding-box;
+}
+
+.general-box {
+    /*background-color: #eaeaea;*/
+    /*box-shadow: 0px 0px 8px;*/
+    border-radius: 2px;
+    margin-top: 7px;
+    /*overflow: hidden !important;
+    width: 100%;
+    /*height: 785px;*/
+}
+
+.color-treeview {
+    border: none !important;
+    /*backgroun0d-color: gray !important;*/
+    /*background-color: rgba(239, 239, 239, 0.87) !important;*/
+}
+
+.third-card-text {
+    padding-top: 5px;
+    padding-left: 32px;
+}
+
+.block-right {
+    float: right;
+}
+
+.ng-scroll-table {
+    /*max-height: 400px;*/
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+/*---kitOfDocuments--end-----*/

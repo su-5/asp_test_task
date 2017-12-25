@@ -15,6 +15,10 @@
             $state.go("mainPage/tree");
         }
 
+        $scope.openDoksPage = function() {
+            $state.go("mainPage/groupOfDocument");
+        }
+
         albumsLoading();
 
         //Modal Window

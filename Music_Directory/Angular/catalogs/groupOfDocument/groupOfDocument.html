@@ -1,0 +1,197 @@
+﻿<style type="text/css">
+    .control-panel {
+        margin-left: 35px;
+        width: 250px;
+    }
+
+    .feature-content {
+        width: 700px;
+    }
+
+    .directive {
+    }
+
+    .custom-item {
+        padding: 1px;
+        position: relative;
+    }
+
+    .custom-item .btn-xs {
+        font-size: 10px;
+    }
+    .item-subtext {
+        color: #ababab;
+        font-style: italic;
+        font-size: 0.875em;
+    }
+
+    .item-button {
+        /*background-image: url(../../Content/images/icons.png);*/
+        background-repeat: no-repeat;
+        display: inline-block;
+        overflow: hidden;
+        padding: 0;
+        margin: 3px 4px 0 4px;
+        width: 16px;
+        height: 16px;
+        float: right;
+        opacity: 0.6;
+    }
+
+        .item-button:hover {
+            opacity: 1;
+        }
+
+    .item-button-trash {
+        background-position: -80px -96px;
+    }
+
+    .item-button-edit {
+        background-position: -128px -81px;
+    }
+
+    .iui-treeview-item {
+        /*height: 23px;*/
+        border-bottom: thin solid #e5e5e5;
+        overflow: hidden;
+    }
+
+    .item-expand-box {
+        background: url(../../resources/icons-x24.png) no-repeat 0 0;
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-right: 2px;
+        vertical-align: top;
+    }
+
+    .item-expand-box-open {
+        background-position: -120px -144px;
+    }
+
+    .item-expand-box-close {
+        background-position: -144px -144px;
+    }
+
+    .item-text {
+        border: thin solid transparent;
+    }
+
+    .item-editor {
+        border: thin solid gray;
+        padding: 3px;
+    }
+
+    .iui-treeview-item-hovered {
+        background: #efefef;
+    }
+
+    .iui-treeview-item-selected {
+        background-color: #dedede;
+        color: #121212;
+    }
+</style><div class="full-length block-left">
+    <br />
+    <div class="portlet">
+        <div class="ng-portlet portlet-header">
+            <div style="display: inline-block;padding: 6px;">
+                <div class="" style="float: left;">
+                    <h5>
+                        <i class="fa fa-file-text-o"></i>
+                        &nbsp;&nbsp;{{currentPage}}
+                    </h5>
+                </div>
+            </div>
+        </div>
+        <div></div>
+        <div class="general-box portlet-content">
+            <div class="" layout-align="center center" layout-xs="column" layout="row">
+                <form name="outerForm" class="form-inline">
+                    <div class="pading-dok">
+                        <!--first card-->
+                        <div layout="column" class="left-md-card-kitOfDoc block-left" ng-style="{'height': heightBlock + 'px'}">
+                            <script type="text/ng-template" id="'item-template.html'">
+                                <div class="custom-item" ng-mouseenter="obj.showButtons = true" ng-mouseleave="obj.showButtons = !obj.showButtonsOnHover">
+                                    <div iui-class="{{obj.expandBox}}" ng-click="obj.events.expandBoxClick(obj)"></div>
+                                    <div style="display:inline-block;vertical-align:middle">
+                                        <!--<span iui-class="fa fa-tag" data-element="icon" class="fa fa-tag"></span>-->
+                                        <span class="item-text" ng-show="!obj.edit">{{obj.text}}</span>
+                                        <input class="item-editor" ng-show="obj.edit" ng-model="obj.editText" ng-keydown="obj.events.editorKeyDown($event, obj)" iui-focus="{active:obj.edit}" onFocus="this.setSelectionRange(0, this.value.length)" ng-blur="obj.events.editorLostFocus(obj)" />
+                                        <span class="item-subtext" ng-show="!obj.edit">{{obj.subText}}</span>
+                                    </div>
+                                    <div style="display:inline-block;position:absolute;right:0;top:2px;padding-left:5px;" ng-show="obj.showButtons != false">
+                                        <button ng-if="obj.expandBox != 'item-expand-box'" class="btn btn-info btn-xs" tooltip-placement="left" uib-tooltip="Редактировать запись" ng-click="obj.events.editClick(obj)">
+                                            <span class="glyphicon glyphicon-pencil"></span>
+                                        </button>
+                                        <!--<span class="item-button item-button-trash" ng-click="obj.events.trashClick(obj)"></span>-->
+                                        <button class="btn btn-primary btn-xs" tooltip-placement="left" uib-tooltip="Добавить запись" ng-click="obj.events.addChild(obj)">
+                                            <span class="glyphicon glyphicon-plus"></span>
+                                        </button>
+                                        <!--<span class="item-button glyphicon glyphicon-plus" ng-click="obj.events.editClick(obj)"></span>-->
+                                    </div>
+                                </div>
+                            </script>
+                            <div ng-if="blockActivity">
+                                <div class="color-treeview">
+                                    <label><i class="fa fa-window-restore third-card-text" aria-hidden="true"></i> Виды деятельности:</label>
+                                    <div>
+                                        <iui-treeview name="{{treeName}}"
+                                                      class="directive"
+                                                      style="border: solid thin snow;"
+                                                      allow-focus="false"
+                                                      template-settings="customItemTemplate"
+                                                      after-collapse="onAfterCollapse(e)"
+                                                      after-expand="onAfterExpand(e)"
+                                                      update-complete="onUpdateComplete()"
+                                                      show-expand-boxes="false"
+                                                      ng-style="{'height':(heightBlock - 30) + 'px'}"
+                                                      items="data"
+                                                      selection-changed="onSelectionChanged()" tabindex="0"
+                                                      item-icon="showIcons"
+                                                      events="treeEvents"
+                                                      emplate-settings="customItemTemplate">
+                                        </iui-treeview>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--second card-->
+                        <div align="center" ng-if="blockDocs" class="right-md-card-kitOfDoc color-md-card-kitOfDoc block-right" ng-style="{'height': heightBlock + 'px'}">
+                            <img style="width: 98px; margin-top: 28%;" alt="" src="Content/images/Download.png">
+                            <div style="color: white;text-shadow: black 0px 0px 5px; font-size: medium; padding-bottom: 5px;">Документы не выбраны.</div>
+                            <div style="color: white;text-shadow: black 0px 0px 5px; font-size: small">
+                                Для получения информации о комплекте документов необходимо<br />выбрать вид деятельности.
+                            </div>
+                        </div>
+                        <div ng-if="!blockDocs" class="right-md-card-kitOfDoc block-right container" layout="column" ng-style="{'height': heightBlock + 'px'}">
+                            <div>
+                                <label><i class="fa fa-list third-card-text" aria-hidden="true"></i> Комплект документов:</label>
+                            </div>
+                            <div id="portlet" class="portlet-content ng-scroll-table full-length block-left" ui-grid="gridOptionskitDocuments" ui-grid-auto-resize ng-style="{'height':heightBlock - 38 + 'px'}">
+                            </div>
+                        </div>
+                        <div class="btn-add-kitOfDoks" style="border: black;">
+                            <div class="block-left bnt-add-activeCategory">
+                                <button ng-disabled="!saveDocd" class="btn btn-over btn-success" ng-click="addActivityCaregor()">Добавить вид деятельности</button>
+                            </div>
+                            <div class="block-left bnt-add-activeCategory">
+                                <button ng-disabled="!saveDocd" class="btn btn-over btn-success" ng-click="addDocumentType()">Добавить тип документа</button>
+                            </div>
+                            <div ng-if="!blockDocs" class="block-right">
+                                <div class="block-left bnt-add-activeCategory">
+                                    <button ng-disabled="!saveDocd" class="btn btn-over btn-success ">Добавить новый комплект</button>
+                                </div>
+                                <div class="block-left bnt-add-activeCategory">
+                                    <button ng-disabled="!saveDocd" ng-click="optionsBtn('editDocs')" class="btn btn-over btn-primary">Изменить комплект</button>
+                                </div>
+                                <div class="block-left bnt-add-activeCategory">
+                                    <button ng-disabled="saveDocd" class="btn btn-over btn-danger">Сохранить изменения</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -4,5 +4,6 @@
     {
         IAlbumBll AlbumBll { get; }
         ITrackBll TrackBll { get; }
+        IActivityCategoryBll ActivityCategoryBll { get; }
     }
 }

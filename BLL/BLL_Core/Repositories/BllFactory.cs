@@ -13,6 +13,7 @@ namespace BLL.BLL_Core.Repositories
         private readonly DalFactory _dalFactory;
         private IAlbumBll _album;
         private ITrackBll _track;
+        private IActivityCategoryBll _activityCategoryBll;
 
         public BllFactory()
         {
@@ -22,5 +23,7 @@ namespace BLL.BLL_Core.Repositories
         public IAlbumBll AlbumBll => _album ?? (_album = new AlbumBll(_dalFactory));
 
         public ITrackBll TrackBll => _track ?? (_track = new TrackBll(_dalFactory));
+
+        public IActivityCategoryBll ActivityCategoryBll => _activityCategoryBll ?? (_activityCategoryBll = new ActivityCategoryBll(_dalFactory));
     }
 }

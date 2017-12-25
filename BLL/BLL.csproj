@@ -44,10 +44,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AutoMapperConfiguration.cs" />
+    <Compile Include="BLL_Core\Interfaces\IActivityCategoryBll.cs" />
     <Compile Include="BLL_Core\Interfaces\IAlbumBll.cs" />
     <Compile Include="BLL_Core\Interfaces\IBllFactory.cs" />
     <Compile Include="BLL_Core\Interfaces\ITrackBll.cs" />
+    <Compile Include="BLL_Core\Repositories\ActivityCategoryBll.cs" />
     <Compile Include="Mappers\TrackMappingProfile.cs" />
+    <Compile Include="Model\ModelDTO\ActivityCategoryDto.cs" />
     <Compile Include="Model\ModelRequest\AddNewAlbumPL.cs" />
     <Compile Include="Model\ModelDTO\AlbumDTO.cs" />
     <Compile Include="Model\ModelDTO\BasicDetails.cs" />

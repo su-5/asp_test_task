@@ -170,6 +170,7 @@
     <Compile Include="App_Start\DependenciesRegistry.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ActivityCategotyController.cs" />
     <Compile Include="Controllers\AlbumController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\BaseApiController.cs" />
@@ -182,6 +183,14 @@
   <ItemGroup>
     <Content Include="Angular\app.js" />
     <Content Include="Angular\appConfig.js" />
+    <Content Include="Angular\catalogs\groupOfDocument\groupOfDocument.html" />
+    <Content Include="Angular\catalogs\groupOfDocument\groupOfDocumentCtrl.js" />
+    <Content Include="Angular\catalogs\groupOfDocument\groupOfDocumentService.js" />
+    <Content Include="Angular\catalogs\groupOfDocument\modals\AddActivityCategor.html" />
+    <Content Include="Angular\catalogs\groupOfDocument\modals\AddActivityCategortToTree.html" />
+    <Content Include="Angular\catalogs\groupOfDocument\modals\AddDocumentType.html" />
+    <Content Include="Angular\catalogs\groupOfDocument\modals\addNewDocumentToGroupOfDocuments.html" />
+    <Content Include="Angular\catalogs\groupOfDocument\templates\accountingParam.html" />
     <Content Include="Angular\controllers\albumsCtlr.js" />
     <Content Include="Angular\controllers\TreeCtrl.js" />
     <Content Include="Angular\modalWindows\addNewAlbum.html" />
