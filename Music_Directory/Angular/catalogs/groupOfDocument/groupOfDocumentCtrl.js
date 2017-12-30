@@ -237,6 +237,7 @@
                         var element = IntegralUITreeViewService.selectedItem($scope.treeName);
                         if (element.templateObj.expandBox === 'item-expand-box') {
                             element.templateObj.expandBox = "item-expand-box item-expand-box-close";
+                            element.expanded = true;
                         }
 
                         groupOfDocumentService.addActivityCategory(activityCategory).then(function (activityCategoryId) {
@@ -309,7 +310,7 @@
 
                 items: [
 
-                    { id: 11, pid: 1, templateObj: { itemId: 11, text: "Desktop", events: objEvents } },
+                    { expanded:false, id: 11, pid: 1, templateObj: { itemId: 11, text: "Desktop", events: objEvents } },
 
                     { id: 12, pid: 1, templateObj: { itemId: 12, text: "Downloads", events: objEvents } }
 

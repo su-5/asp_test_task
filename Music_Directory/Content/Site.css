@@ -67,7 +67,9 @@
 .block-left {
     float: left !important;
 }
-
+.header-height {
+    height: 21px;
+}
 /*---kitOfDocuments--Begin-----*/
 .pading-dok {
     padding-top: 1px;
@@ -170,7 +172,7 @@
     padding: 0px 0px 0px 15px;
 }
 
-..portlet-header {
+.portlet-header {
     position: relative;
     padding: 5px 0px 0px 15px;
     background-color: #f3f3f3;

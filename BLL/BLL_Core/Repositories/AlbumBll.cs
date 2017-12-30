@@ -1,6 +1,7 @@
 ﻿using BLL.BLL_Core.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -38,7 +39,8 @@ namespace BLL.BLL_Core.Repositories
             DateTime dateValue = new DateTime(Convert.ToInt32(data.Album.Year), 01, 01);
             newAlbum.Year = dateValue;
             newAlbum.Name = data.Album.Name;
-            newAlbum.Tracks = Mapper.Map<IList<TrackDTO>, IList<Track>>(data.TrackList);
+            foreach (var track in Mapper.Map<IList<TrackDTO>, IList<Track>>(data.TrackList))
+                newAlbum.Tracks = new Collection<Track> { track }; ;
             _dalFactory.Album.Add(newAlbum);
 
         }

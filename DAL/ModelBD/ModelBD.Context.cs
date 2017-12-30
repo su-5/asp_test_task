@@ -12,19 +12,21 @@ namespace DAL.ModelBD
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-    
+
     public partial class MusicDBEntities : DbContext
     {
         public MusicDBEntities()
             : base("name=MusicDBEntities")
         {
         }
-    
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            throw new UnintentionalCodeFirstException();
+            modelBuilder.Entity<Track>().HasMany(e => e.Albums)
+                .WithMany(e => e.Tracks)
+                .Map(m => m.ToTable("AlbumTrack").MapLeftKey("TrackId").MapRightKey("AlbumId"));
         }
-    
+
         public virtual DbSet<Album> Albums { get; set; }
         public virtual DbSet<Track> Tracks { get; set; }
     }

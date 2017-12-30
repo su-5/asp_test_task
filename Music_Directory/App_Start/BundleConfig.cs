@@ -25,7 +25,9 @@ namespace Web
                 "~/Scripts/angular-ui/ui-bootstrap-tpls.js",
                 "~/Scripts/angular-ui/ui-bootstrap",
                 "~/Scripts/angular-ui.js",
-              //  "~/Scripts/tr/angular.integralui.accordion.min.js",
+                "~/Scripts/kendo.all.min.js",
+
+                //  "~/Scripts/tr/angular.integralui.accordion.min.js",
                 "~/Scripts/tr/angular.integralui.min.js",
                // "~/Scripts/tr/angular.integralui.checkbox.min.js",
                 "~/Scripts/tr/angular.integralui.lists.min.js",
@@ -43,6 +45,8 @@ namespace Web
                 "~/Content/css/integralui.treeview.css",
                 "~/Content/css/integralui.css",
                 "~/Content/css/samples.css",
+                "~/Content/kendo/kendo.default.min.css",
+                "~/Content/kendo/kendo.common.min.css",
                 "~/Content/bootstrap.css"));
 
             //minimization AngularJs Scripts

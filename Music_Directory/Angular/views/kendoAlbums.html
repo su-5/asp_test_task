@@ -1,0 +1,14 @@
+﻿<div style="width: 100%; float: left;">
+    <br />
+    <div class="header-height">
+        <div class="clearfix"></div>
+        <div class="block-left"><button type="button" class="btn btn-sm btn-newAlbum-param btn-primary " ng-click="windowAddNewAlbum()">Добавить новый альбом</button></div>
+        <div class="block-left"><button type="button" class="btn btn-sm btn-newAlbum-param btn-danger" ng-click="openTreePage()">Открыть в тревью</button></div>
+        <div class="block-left"><button type="button" class="btn btn-sm btn-newAlbum-param btn-default" ng-click="openDoksPage()">Открыть доки</button></div>
+        <div class="block-left"><button type="button" class="btn btn-sm btn-newAlbum-param btn-info" ng-click="openAlbums()">Открыть в Ui-grid</button></div>
+    </div>
+    <div>
+        <kendo-grid grid="grig" options="mainGridOptions"></kendo-grid>
+    </div>
+</div>
+
