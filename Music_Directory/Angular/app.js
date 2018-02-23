@@ -10,7 +10,7 @@
     app.run(["$rootScope", "$location", "$http", "$state", "$stateParams", "$sce", "loadingService",
         function ($rootScope, $location, $http, $state, $stateParams, $sce, loadingService) {
             $rootScope.loadingShow = function () {
-                $rootScope.loadingIsShow = loadingService.show(); // loading
+                $rootScope.loadingIsShow = loadingService.show(); // loading show
             };
 
             $rootScope.loadingHide = function () {
